@@ -1,16 +1,17 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useState, useRef } from "react";
+import TodoList from "./TodoList";
 
 function App() {
+  const [todos, setTodo] = useState(["task1", "task2"]);
+
   return (
-    <div className="App">
-      <>
-        <input type="text" />
-        <button>Add Todo</button>
-        <button>Clear Complete</button>
-        <div>Number of task</div>
-      </>
-    </div>
+    <>
+      <TodoList todos={todos} />
+      <input type="text" />
+      <button>Add Todo</button>
+      <button>Clear Complete</button>
+      <div>Number of task</div>
+    </>
   );
 }
 
